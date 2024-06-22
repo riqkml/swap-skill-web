@@ -1,8 +1,12 @@
 import { useState } from "react";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import { useAppDispatch, useAppSelector } from "../../hooks";
+import { setValue } from "./LoginSlice";
 
 const Login = (props: { setEmail: (email: string) => void }) => {
+    const count = useAppSelector((state) => state.counter.value);
+    const dispatch = useAppDispatch();
     const [isVisible, setIsVisible] = useState(false);
 
     const toggleVisibility = () => {
@@ -11,14 +15,14 @@ const Login = (props: { setEmail: (email: string) => void }) => {
 
     return (
         <>
-            <div style={{ backgroundImage: "url('/brainstorming.png')", filter: 'brightness(0.5)' }} className="absolute inset-0 w-auto h-auto"></div>
+            <div style={{ backgroundColor: "white", filter: 'brightness(0.5)' }} className="absolute inset-0 w-auto h-auto"></div>
             <div className="max-w-auto mx-auto relative flex flex-col">
                 <div className="h-[500px] w-[50%] mx-auto flex flex-col items-center justify-center gap-10 text-[#5A5A5D] mt-16">
                     {/* form */}
                     <div className="flex items-center justify-center min-h-[580px] mt-20 shadow-2xl rounded-xl w-[70%] bg-white">
                         <form className="flex flex-col gap-10 w-[70%]">
                             <h2 className="text-3xl font-medium text-black">
-                                Login to your account
+                                Login to your account {count}
                             </h2>
                             {/* email */}
                             <div className="flex flex-col gap-2">
@@ -64,6 +68,7 @@ const Login = (props: { setEmail: (email: string) => void }) => {
                                         type="submit"
                                         className="bg-[#007DFA] -mt-5 flex items-center justify-center mx-14 w-[70%] text-white 
             text-center font-medium p-3 rounded-md hover:bg-[#3390ed]"
+                                        onClick={e => dispatch(setValue(10))}
                                     >
                                         Login
                                     </button>

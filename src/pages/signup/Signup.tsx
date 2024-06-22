@@ -16,7 +16,7 @@ const Register = () => {
 
     return (
         <>
-            <div style={{ backgroundImage: "url('/sharing.jpg')", filter: 'brightness(0.5)' }} className="absolute inset-0 w-auto min-h-[1300px]"></div>
+            <div style={{ backgroundColor: "white", filter: 'brightness(0.5)' }} className="absolute inset-0 w-auto min-h-[1300px]"></div>
             <div className="max-w-auto mx-auto relative flex flex-col">
                 {/* form */}
                 <div className="h-auto w-[70%] mx-auto flex flex-col items-center justify-center gap-10 text-[#5A5A5D]">

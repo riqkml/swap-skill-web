@@ -57,7 +57,7 @@ const Navbar = () => {
                 <div className="mx-auto min-h-[50px] -mt-5">
                     <div className='relative flex flex-row items-center ml-20'>
                         <a href="/home">
-                            <img src="" alt="logo" />
+                            <img src="jembatan_ilmu.png" width="200" height="150" alt="logo" />
                         </a>
                         <DropdownButton className='ml-20 bg-[#007DFA]' id="dropdown-basic-button" title="Tentang">
                             <Dropdown.Item onClick={() => handleDropdownItemClick('action-1')}>Sekolah</Dropdown.Item>

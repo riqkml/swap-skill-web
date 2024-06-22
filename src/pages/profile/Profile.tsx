@@ -27,10 +27,10 @@ const Profile = () => {
                             </>
                         } />
                 </div>
-                <div className='max-w-auto mx-[200px] relative flex flex-row justify-between items-center'>
+                <div className='max-w-auto mx-[200px] relative flex flex-row justify-between items-center pr-6'>
                     <div className='flex flex-col w-full'>
-                        <div className='flex flex-row justify-between items-center mb-4'>
-                            <div className='flex flex-col items-center'>
+                        <div className='flex flex-row justify-between items-center mb-4 mt-12'>
+                            <div className='flex flex-col items-center pad'>
                                 <label htmlFor="upload-photo" className="cursor-pointer">
                                     <img src='/avatar.png' className='w-[150px]' alt="" />
                                     <img src={file} className='w-[150px]' alt="" />
@@ -44,7 +44,7 @@ const Profile = () => {
                                     onChange={handleFileChange}
                                 />
                             </div>
-                            <div className='border-l-2 border-gray-500 w-full pl-4'>
+                            <div className='border-l-2 border-gray-500 w-full pl-4 '>
                                 <div className='flex flex-row gap-4 mb-4'>
                                     <button
                                         className={`px-4 py-2 rounded-md border-2 border-gray-300 ${selectedTab === 'My Profile' ? 'bg-gray-200 font-bold' : ''}`}
